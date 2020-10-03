@@ -45,6 +45,9 @@ function buildBookmarks(){
 		// Item
 		const item = document.createElement('div');
 		item.classList.add('item');
+		// Item
+		const content = document.createElement('div');
+		content.classList.add('content');
 		// Close icon
 		const closeIcon = document.createElement('i');
 		closeIcon.classList.add('fas', 'fa-times');
@@ -64,7 +67,8 @@ function buildBookmarks(){
 		link.textContent = name;
 		// Append to bookmarks container
 		linkInfo.append(favicon, link);
-		item.append(closeIcon, linkInfo);
+		content.append(closeIcon, linkInfo);
+		item.append(content);
 		bookmarksContainer.appendChild(item);
 	});
 }

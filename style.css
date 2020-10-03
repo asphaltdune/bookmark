@@ -33,16 +33,17 @@ a:hover {-webkit-transition: color 400ms ease-out;-moz-transition: color 400ms e
 
 .command{max-width:600px;text-align:center;margin:0 auto;padding:60px 0 120px;}
 
-button{cursor:pointer;color:#fafafa;background-color:#161318;border:solid 1px #fff;height:40px;padding:0 30px;width:160px;line-height: 40px;text-transform:uppercase;font-weight:700;letter-spacing: 0.08em;font-size:10px;}
+button{cursor:pointer;color:#fafafa;background-color:#161318;border:solid 1px #fff;height:40px;padding:0 30px;width:160px;line-height: 40px;font-family: 'Roboto Mono', Courier New, Courier, monospace;text-transform:uppercase;font-weight:500;letter-spacing: 0.08em;font-size:12px;}
 button:hover{background-color:#fafafa;color:#161318;}
 button:focus{outline:none;}
 
-.container {display:flex;flex-direction:row;flex-wrap:wrap;justify-content: center;padding:20px;width:1380px;margin:0 auto;}
-.item{border:solid 1px #efefef;padding:20px;margin:10px;width:200px;} 
+.container {padding:20px;max-width:1380px;margin:0 auto;}
+.item{position:relative;display:block;float:left;width:20%;} 
+.content{padding:10px;margin:10px;border:solid 1px #efefef;}
 
 .fa-times{float:right;cursor:pointer;z-index:2;color:#fff;}
 .name{margin:20px 20px 0 0;text-transform:uppercase;font-weight:500;letter-spacing: 0.1em;}
-.name img{height:14px;width:14px;margin:0 20px 0 0;vertical-align:sub;}
+.name img{height:14px;width:14px;margin:0 10px 0 0;vertical-align:sub;}
 
 /* Modal */
 .modal-container{background: rgba(0, 0, 0, 0.8);display:none;position:fixed;top:0;left:0;right:0;bottom:0;}
@@ -62,6 +63,14 @@ h3{margin:0;}
 .save{margin:20px 0 0;}
 
 @media screen and (max-width: 600px){ 
-.container{flex-direction:column;}
+.item{position:relative;display:block;float:left;width:100%;} 
 }
-
+@media screen and (min-width: 601px) and (max-width: 800px){ 
+.item{position:relative;display:block;float:left;width:50%;} 
+}
+@media screen and (min-width: 801px) and (max-width: 1100px){ 
+.item{position:relative;display:block;float:left;width:33.33%;} 
+}
+@media screen and (min-width: 1101px) and (max-width: 1240px){ 
+.item{position:relative;display:block;float:left;width:25%;} 
+}
